@@ -15,26 +15,9 @@ import java.util.concurrent.locks.Lock;
 @RequiredArgsConstructor
 public class RoomService {
 
-  private final RedisLockRegistry redisLockRegistry;
-
   @Cacheable(value = "room", key = "#id")
   public Room getRoom(Long id) {
     return Room.builder().id(1L).name("Java").build();
   }
 
-  public String startTransaction() {
-    Lock lock = redisLockRegistry.obtain("my-lock");
-    try {
-      if (lock.tryLock(10, TimeUnit.SECONDS)) {
-        // Do something with the lock
-        throw new InterruptedException("test");
-      }
-    } catch (InterruptedException e) {
-      Thread.currentThread().interrupt();
-    } finally {
-      lock.unlock();
-    }
-
-    return "success";
-  }
 }
