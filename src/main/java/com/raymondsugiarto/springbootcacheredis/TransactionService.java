@@ -21,7 +21,7 @@ public class TransactionService {
     try {
       if (lock.tryLock(10, TimeUnit.SECONDS)) {
         // Do something with the lock
-        throw new InterruptedException("test");
+//        throw new InterruptedException("test");
       }
     } catch (InterruptedException e) {
       Thread.currentThread().interrupt();

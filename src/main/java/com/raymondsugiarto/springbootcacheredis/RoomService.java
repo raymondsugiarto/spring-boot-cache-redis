@@ -2,11 +2,7 @@ package com.raymondsugiarto.springbootcacheredis;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.integration.redis.util.RedisLockRegistry;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 /**
  * @author raymond on 26/02/23

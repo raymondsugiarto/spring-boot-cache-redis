@@ -13,16 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class StudentController {
 
-    private final StudentRepository studentRepository;
     private final StudentService studentService;
-    private final RoomService roomService;
-
 
     @PostMapping("/students")
     public Student createStudent() {
         return studentService.createStudent();
     }
-
 
     @GetMapping("/student")
     public Student getStudent() {
