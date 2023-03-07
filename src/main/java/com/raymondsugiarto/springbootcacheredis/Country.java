@@ -3,13 +3,12 @@ package com.raymondsugiarto.springbootcacheredis;
 import lombok.*;
 import org.springframework.data.redis.core.RedisHash;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
  * @author raymond on 02/03/23
  */
-@RedisHash("country")
+@RedisHash("")
 @Getter
 @Setter
 @AllArgsConstructor

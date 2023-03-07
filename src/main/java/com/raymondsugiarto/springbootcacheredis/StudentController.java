@@ -1,5 +1,6 @@
 package com.raymondsugiarto.springbootcacheredis;
 
+import io.lettuce.core.RedisCommandTimeoutException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;

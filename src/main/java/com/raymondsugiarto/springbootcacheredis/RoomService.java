@@ -12,6 +12,10 @@ import org.springframework.stereotype.Service;
 public class RoomService {
 
   @Cacheable(value = "room", key = "#id")
+  public Room getRoom(Long id, boolean cache) {
+    return Room.builder().id(1L).name("Java").build();
+  }
+
   public Room getRoom(Long id) {
     return Room.builder().id(1L).name("Java").build();
   }

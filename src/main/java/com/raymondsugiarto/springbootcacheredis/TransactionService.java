@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.integration.redis.util.RedisLockRegistry;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 
